@@ -1,0 +1,123 @@
+.footer {
+  grid-row: 5 / 6;
+  grid-column: full-start / full-end;
+  padding: 1.5rem 10%;
+  background-color: $color-dark-blue;
+
+  display: grid;
+  grid-template-columns: 0.4fr 1fr 0.7fr;
+  grid-gap: 2rem;
+
+  @media only screen and (max-width: $bp-larger) {
+    grid-template-columns: 0.7fr 0.8fr 1fr;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 1rem 5%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 6rem;
+
+  &__logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+  }
+}
+
+.footer-list {
+  &__links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    @media only screen and (max-width: $bp-small) {
+      display: flex;
+      flex-direction: column;
+      //align-items: center;
+    }
+  }
+
+  &__item {
+    width: 40%;
+    margin-bottom: 1rem;
+
+    @media only screen and (max-width: $bp-small) {
+      width: 100%;
+    }
+  }
+
+  &__link {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: $color-white;
+
+    &:hover {
+      color: $color-lime-green;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+.footer-img {
+}
+
+.logo-copy {
+  width: 100%;
+  // margin-bottom: 2.7rem;
+
+  @media only screen and (max-width: $bp-small) {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.footer-secondary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.footer-text {
+  font-size: 0.7rem;
+  color: rgba($color-very-light-gray, 0.8);
+}
+
+.btn-end {
+  align-self: flex-end;
+
+  @media only screen and (max-width: $bp-small) {
+    align-self: center;
+    margin-bottom: 1rem;
+  }
+}
+
+.attribution {
+  grid-row: 2 / 3;
+  grid-column: 1 / -1;
+  font-size: 1rem;
+  text-align: center;
+}
+.attribution a {
+  color: $color-white;
+}
